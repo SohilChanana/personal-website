@@ -7,9 +7,18 @@
   padding: 0;
 }
 
+:root {
+  --primary-gradient-color: #0beef9;
+  --secondary-gradient-color: #48a9fe;
+  --background-color: rgb(17, 17, 17);
+  --text-color: white;
+  --secondary-text-color: rgb(150, 150, 150);
+  --dark-gray: rgb(100, 100, 100);
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(17, 17, 17);
+  background-color: var(--background-color);
 }
 
 html {
@@ -17,7 +26,7 @@ html {
 }
 
 p {
-  color: rgb(200, 200, 200);
+  color: var(--secondary-text-color);
 }
 
 /* TRANSITION */
@@ -48,21 +57,21 @@ nav {
 }
 
 a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
-  text-decoration-color: gray;
+  text-decoration-color: var(--dark-gray);
 }
 
 a:hover {
-  color: grey;
+  color: var(--dark-gray);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--dark-gray);
 }
 
 .logo {
   font-size: 2rem;
-  color: white;
+  color: var(--text-color);
 }
 
 .logo:hover {
@@ -92,7 +101,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: var(--text-color);
   transition: all 0.3 ease-in-out;
 }
 
@@ -113,13 +122,13 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
 
 .menu-links a:hover {
-  background-color: rgb(53, 53, 53);
+  background-color: var(--dark-gray);
 }
 
 .menu-links li {
@@ -206,7 +215,7 @@ section {
   font-size: 3rem;
   text-align: center;
   /* color: white; */
-  background: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
+  background: linear-gradient(315deg, var(--primary-gradient-color) 0%, var(--secondary-gradient-color) 74%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -225,11 +234,11 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
-  fill: white;
+  fill: var(--text-color);
 }
 
 .icon:hover {
-  fill: rgb(100, 100, 100);
+  fill: var(--dark-gray);
 }
 
 /* BUTTONS */
@@ -250,7 +259,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--dark-gray) .1rem solid;
 }
 
 .btn-color-1:hover,
@@ -260,21 +269,21 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--dark-gray);
+  color: var(--text-color);
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: black;
 }
 
 .btn-color-2 {
   background: none;
-  color: white;
+  color: var(--text-color);
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: white 0.1rem solid;
 }
 
 .btn-container {
