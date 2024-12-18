@@ -63,19 +63,33 @@ a {
 }
 
 a:hover {
-  color: var(--dark-gray);
+  color: var(--secondary-gradient-color);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: var(--dark-gray);
+  text-decoration-color: var(--secondary-gradient-color);
 }
 
 .logo {
   font-size: 2rem;
   color: var(--text-color);
+  font-weight: 800;
+  transition: all 300ms ease-in-out;
+}
+
+.logo span {
+  background: linear-gradient(
+    315deg,
+    var(--primary-gradient-color) 0%,
+    var(--secondary-gradient-color) 74%
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 .logo:hover {
   cursor: default;
+  transform: scale(1.1);
+  color: var(--text-color);
 }
 
 /* HAMBURGER MENU */
@@ -92,17 +106,15 @@ a:hover {
 .hamburger-icon {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   height: 24px;
   width: 30px;
   cursor: pointer;
 }
 
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: var(--text-color);
-  transition: all 0.3 ease-in-out;
+.hamburger-icon i {
+  color: var(--text-color);
 }
 
 .menu-links {
@@ -137,30 +149,6 @@ a:hover {
 
 .menu-links.open {
   max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
 }
 
 /* SECTIONS */
@@ -204,6 +192,7 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  font-size: 1.75rem;
 }
 
 .section__text__p2 {
@@ -211,16 +200,18 @@ section {
   margin-bottom: 1rem;
 }
 
-.title{
+.title {
   font-size: 3rem;
   text-align: center;
-  /* color: white; */
-  background: linear-gradient(315deg, var(--primary-gradient-color) 0%, var(--secondary-gradient-color) 74%);
+  background: linear-gradient(
+    315deg,
+    var(--primary-gradient-color) 0%,
+    var(--secondary-gradient-color) 74%
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 
 #socials-container {
   display: flex;
@@ -259,7 +250,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: var(--dark-gray) .1rem solid;
+  border: var(--dark-gray) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -330,6 +321,10 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+}
+
+.text-container {
+  font-size: 0.9rem;
 }
 
 .section-container {
